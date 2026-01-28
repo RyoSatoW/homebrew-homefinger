@@ -34,6 +34,17 @@ brew untap RyoSatoW/homefinger
 
 ## Note
 
+### Gatekeeperの警告について
+
+HomeFingerは署名されていないため、初回起動時に「壊れているため開けません」という警告が表示されます。
+以下のコマンドで解除してから起動してください:
+
+```bash
+xattr -cr /Applications/HomeFinger.app
+```
+
+### アクセシビリティ権限
+
 初回起動後、以下の設定でHomeFingerを許可してください:
 
 **システム設定 > プライバシーとセキュリティ > アクセシビリティ**
