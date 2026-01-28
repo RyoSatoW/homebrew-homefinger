@@ -20,8 +20,13 @@ cask "homefinger" do
   ]
 
   caveats <<~EOS
-    HomeFingerはアクセシビリティ権限が必要です。
+    HomeFingerは署名されていないため、初回起動時にGatekeeperの警告が表示されます。
+    以下のコマンドで解除してから起動してください:
+
+      xattr -cr /Applications/HomeFinger.app
+
+    また、アクセシビリティ権限が必要です。
     初回起動後、以下の設定で許可してください:
-    システム設定 > プライバシーとセキュリティ > アクセシビリティ
+      システム設定 > プライバシーとセキュリティ > アクセシビリティ
   EOS
 end
