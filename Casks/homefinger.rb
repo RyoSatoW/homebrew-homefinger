@@ -1,7 +1,7 @@
 
 cask "homefinger" do
-  version "1.0.0"
-  sha256 "ここにSHA256ハッシュ値を記入"
+  version "0.0.1"
+  sha256 "b21576d998dec9411088d8985621a3e508f558a924fe7e6a261d19f01847942a"
 
   url "https://github.com/RyoSatoW/HomeFinger/releases/download/v#{version}/HomeFinger-v#{version}.zip"
   name "HomeFinger"
