@@ -21,9 +21,10 @@ cask "homefinger" do
 
   caveats <<~EOS
     HomeFingerは署名されていないため、初回起動時にGatekeeperの警告が表示されます。
-    以下のコマンドで解除してから起動してください:
-
-      xattr -cr /Applications/HomeFinger.app
+    以下の手順で開いてください:
+      1. /Applications/HomeFinger.app を右クリック
+      2. メニューから「開く」を選択
+      3. 警告ダイアログで「開く」をクリック
 
     また、アクセシビリティ権限が必要です。
     初回起動後、以下の設定で許可してください:
