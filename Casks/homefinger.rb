@@ -1,0 +1,27 @@
+
+cask "homefinger" do
+  version "1.0.0"
+  sha256 "ここにSHA256ハッシュ値を記入"
+
+  url "https://github.com/RyoSatoW/HomeFinger/releases/download/v#{version}/HomeFinger-v#{version}.zip"
+  name "HomeFinger"
+  desc "Dock app switcher using Command + number keys for macOS"
+  homepage "https://github.com/RyoSatoW/HomeFinger"
+
+  # macOS 13.0以上が必要
+  depends_on macos: ">= :ventura"
+
+  app "HomeFinger.app"
+
+  # アンインストール後のクリーンアップ
+  zap trash: [
+    "~/Library/Preferences/com.homefinger.HomeFinger.plist",
+    "~/Library/Application Support/HomeFinger",
+  ]
+
+  caveats <<~EOS
+    HomeFingerはアクセシビリティ権限が必要です。
+    初回起動後、以下の設定で許可してください:
+    システム設定 > プライバシーとセキュリティ > アクセシビリティ
+  EOS
+end
