@@ -15,7 +15,7 @@ cask "homefinger" do
 
   # アンインストール後のクリーンアップ
   zap trash: [
-    "~/Library/Preferences/com.homefinger.HomeFinger.plist",
+    "~/Library/Preferences/sato-llc.HomeFinger.plist",
     "~/Library/Application Support/HomeFinger",
   ]
 
